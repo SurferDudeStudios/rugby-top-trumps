@@ -1,7 +1,14 @@
 body {
+  background-color: #40e0d0 !important;
+  color: #444444 !important;
+  text-align: center !important;
+}
+header, #header, #header nav {
   background-color: #333366 !important;
   color: #ffffff !important;
-  text-align: center !important;
+}
+header a, header button span {
+  color: #ffffff !important;
 }
 .card-player{
   width: 235px;

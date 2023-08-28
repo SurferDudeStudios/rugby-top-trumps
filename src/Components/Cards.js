@@ -15,41 +15,18 @@ const Cards = () => {
 const PlayerImage = ({img, name}) => {
     let imageLibrary = "/img/player-images/";
     let defaultImage = "player-default.jpg";
-    let returnImage = '';
-    checkIfImageExists(imageLibrary.concat(img), (exists) => {
-      if (exists) {
-        console.log('Image exists.');
-      } else {
-        console.error('Image does not exists.');
-      }
-    });
-    if (img === '' || img === null) {
-      returnImage = imageLibrary.concat(defaultImage);
-    } else {
-      returnImage = imageLibrary.concat(img);
-    };
-    console.log(returnImage);
+    let returnImage = imageLibrary.concat(img);
+    let defaultReturnImage = imageLibrary.concat(defaultImage);
     return (
-      <Card.Img variant="top" src={returnImage} alt={name} />
+      <Card.Img
+        variant="top"
+        src={returnImage}
+        alt={name}
+        onError={(e) => {
+          e.target.src = defaultReturnImage;
+        }}
+        />
     )
-};
-
-function checkIfImageExists(url, callback) {
-  //Check for existance of image
-  const img = new Image();
-  img.src = url;
-  
-  if (img.complete) {
-    callback(true);
-  } else {
-    img.onload = () => {
-      callback(true);
-    };
-    
-    img.onerror = () => {
-      callback(false);
-    };
-  }
 };
 
 const PlayerAge = ({dob}) => {
@@ -83,7 +60,7 @@ const CardContent = ({players}) => {
         {players.map((player) => (
           <Card key={player.name} className='card-player'>
           <Card.Header>
-           <PlayerImage img={player.img} name={player.name}></PlayerImage>
+           <PlayerImage img={player.img} name={player.name} ></PlayerImage>
           </Card.Header>
           <Card.Body>
             <Card.Title>{player.name}</Card.Title>
