@@ -1,54 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import DefaultOpening from "./Components/DefaultOpening";
 import LawsOfGame from "./Components/LawsOfGame";
 import PlayGame from "./Components/PlayGame";
 import ViewCards from "./Components/ViewCards";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faBinoculars } from "@fortawesome/free-solid-svg-icons";
+import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-//const gameState = "openGame";
+export default function App() {
+  const [gameState, setGameState] = useState("DefaultOpening");
 
-function App() {
-  let toRender = null;
-  //const [gameState, setGameState] = useState("DefaultOpening");
-  let [state, setState] = useState("DefaultOpening");
-  function setGameState() {
-    setState("state Changed from child component!");
+  function handleNavChange(nav) {
+    //setGameState((nav) => );
   }
-  switch (state) {
-    case "playGame":
-      //Play game
-      toRender = <PlayGame />;
-      break;
-    case "lawsGame":
-      //Laws of game
-      toRender = <LawsOfGame />;
-      break;
-    case "viewAll":
-      //View all cards
-      toRender = <ViewCards />;
-      break;
-    case "openGame":
-      //Default view
-      toRender = <DefaultOpening />;
-      break;
-    default:
-    //Failure of all above (error)
-  }
+
   return (
     <div className="App">
-      <Header change={setGameState}></Header>
+      <Header onNavChange={handleNavChange} />
       <main>
         <div className="container clearfix">
-          <p>{state}</p>
-          {toRender}
+          <p>
+            {
+              //gameState
+            }
+          </p>
+          <DefaultOpening />
+          <PlayGame />
+          <LawsOfGame />
+          <ViewCards />
         </div>
       </main>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
-
-export default App;

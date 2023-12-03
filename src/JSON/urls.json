@@ -1,0 +1,351 @@
+{
+  "positions": [
+    {
+      "text": "Prop",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Prop"
+    },
+    {
+      "text": "Hooker",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Hooker"
+    },
+    {
+      "text": "Second row",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Locks"
+    },
+    {
+      "text": "Flanker",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Flanker"
+    },
+    {
+      "text": "Number 8",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Number_eight"
+    },
+    {
+      "text": "Scrum half",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Scrum-half"
+    },
+    {
+      "text": "Fly half",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Fly-half"
+    },
+    {
+      "text": "Centre",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Centre"
+    },
+    {
+      "text": "Winger",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Wing"
+    },
+    {
+      "text": "Full back",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union_positions#Full-back"
+    }
+  ],
+  "clubs": [
+    {
+      "text": "Edinburgh",
+      "logo": "",
+      "url": "https://en.wikipedia.org/wiki/Edinburgh_Rugby"
+    },
+    {
+      "text": "Glasgow",
+      "logo": "",
+      "url": "https://en.wikipedia.org/wiki/Glasgow_Warriors"
+    },
+    {
+      "text": "Bath",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Tolouse",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Racing 92",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Leinster",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Ulster",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Munster",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Connacht",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Saracens",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Harlequins",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Zebre Parma",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Benetton",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Northampton Saints",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Fijian Drua",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "La Rochelle",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Highlanders",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Palmerston North",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "New Plymouth",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Yokohama Canon Eagles",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Sharks",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Green Rockets Tokatsu",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Brumbies",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Dragons",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Toulon",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Ospreys",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Moana Pasifika",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Parramatta",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Sunwolves",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Panasonic Wild Knights",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Tokyo Sungoliath",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "CSM Baia Mare",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "CA Périgueux",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Selknam",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Castres Olympique",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Toronto Arrows",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Béziers",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Lusitanos XV",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Bayonne",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Golden Lions",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Black Lion",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    }
+  ],
+  "countries": [
+    {
+      "text": "Scotland",
+      "url": "https://en.wikipedia.org/wiki/Scotland_national_rugby_union_team"
+    },
+    {
+      "text": "England",
+      "url": "https://en.wikipedia.org/wiki/England_national_rugby_union_team"
+    },
+    {
+      "text": "Ireland",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Wales",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "France",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Italy",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "New Zealand",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "South Africa",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Australia",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Fiji",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Samoa",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Tonga",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Namibia",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Romania",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Portugal",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Japan",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Uruguay",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Chile",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Georgia",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    },
+    {
+      "text": "Argentina",
+      "logo": "",
+      "url": "https://www.urlresource.com"
+    }
+  ]
+}
