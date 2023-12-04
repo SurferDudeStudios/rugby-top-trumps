@@ -84,18 +84,19 @@ function PlayerText({ text }) {
 function CardContent({ players }) {
   return (
     <>
-      <h2 className="pt-5">View all</h2>
       {players.map((player) => (
         <Card key={player.name} className="card-player">
           <Card.Header>
             <PlayerImage img={player.img} name={player.name}></PlayerImage>
           </Card.Header>
           <Card.Body>
-            <Card.Title>{player.name}</Card.Title>
-            <PlayerText text={player.position}></PlayerText>
             <PlayerText text={player.club}></PlayerText>
             <PlayerText text={player.country}></PlayerText>
-            <ButtonGroup aria-label="Player statistic buttons" className="mt-3">
+            <Card.Title>
+              {player.name}
+              <span>{player.position}</span>
+            </Card.Title>
+            <ButtonGroup aria-label="Player statistic buttons">
               <PlayerAge dob={player.dob}></PlayerAge>{" "}
               <Button variant="primary">
                 Caps: <span className="card-button-value">{player.caps}</span>

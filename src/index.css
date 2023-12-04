@@ -1,13 +1,107 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body {
+  background-color: #40e0d0 !important;
+  color: #444444 !important;
+  text-align: center !important;
+}
+header,
+#header,
+#header nav {
+  background-color: #333366 !important;
+  color: #ffffff !important;
+}
+header a,
+header button span {
+  color: #ffffff !important;
+}
+.card-player {
+  width: 235px;
+  max-width: 235px;
+  border: none !important;
+  float: left;
+  margin: 0.5rem;
+}
+.card-player button {
+  text-align: left;
+  background: none;
+  border: none;
+  color: #444444;
+  border-bottom: 1px solid #444444;
+  font-weight: 600;
+}
+.card-player button:hover {
+  background-color: #444444;
+}
+.card-player button:last-of-type {
+  border-bottom: none;
+}
+.card-player .card-body {
+  padding: 0rem !important;
+}
+.card-player .btn-group {
+  padding: 0.5rem !important;
+  padding-top: 0rem !important;
+  display: inline-block;
+  width: 100%;
+}
+.card-player .btn-group .btn {
+  display: block;
+  width: 100%;
+  border-radius: 0px !important;
+}
+.card-player .card-button-value {
+  float: right;
+}
+.card-player .card-header {
+  padding: 0rem !important;
+}
+.card-title {
+  display: block;
+}
+.card-title span {
+  display: block;
+  font-size: 16px;
+}
+.card-player .card-text {
+  margin-bottom: 0rem;
+}
+.card-player .card-text::before {
+  width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  margin-right: 1rem;
+  display: inline-block;
+  object-fit: cover;
+  content: "";
+  background-size: cover !important;
+  line-height: 20px;
+  overflow: visible;
+}
+.card-player .card-text.bath::before {
+  background: url("../public/img/union-club-icons/bath-logo.png") no-repeat 0 0;
+}
+.card-player .card-text.edinburgh::before {
+  background: url("../public/img/union-club-icons/edinburgh-logo.png") no-repeat
+    0 0;
+}
+.card-player .card-text.glasgow::before {
+  background: url("../public/img/union-club-icons/glasgow-logo.png") no-repeat 0
+    0;
+}
+.card-player .card-text.scotland::before {
+  background: url("../public/img/union-club-icons/scotland-logo.png") no-repeat
+    0 0;
 }

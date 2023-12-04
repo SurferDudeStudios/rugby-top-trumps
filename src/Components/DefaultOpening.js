@@ -1,10 +1,11 @@
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 
-export default function DefaultOpening() {
+export default function DefaultOpening({ onNavChange }) {
   const imageLibrary = "/img/player-images/";
   const defaultImage = "player-default.jpg";
   let defaultReturnImage = imageLibrary.concat(defaultImage);
@@ -34,7 +35,12 @@ export default function DefaultOpening() {
                   <Card.Title>Play</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                  <Button variant="primary" className="w-100">
+                  <Button
+                    variant="primary"
+                    className="w-100"
+                    value="playGame"
+                    onClick={(e) => onNavChange(e.target.value)}
+                  >
                     Play rugby top trumps
                   </Button>
                 </Card.Footer>
@@ -56,7 +62,12 @@ export default function DefaultOpening() {
                   <Card.Title>Laws</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                  <Button variant="primary" className="w-100">
+                  <Button
+                    variant="primary"
+                    className="w-100"
+                    value="lawsOfGame"
+                    onClick={(e) => onNavChange(e.target.value)}
+                  >
                     Learn the laws
                     <span className="d-none">
                       {" "}
@@ -82,7 +93,12 @@ export default function DefaultOpening() {
                   <Card.Title>View</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                  <Button variant="primary" className="w-100">
+                  <Button
+                    variant="primary"
+                    className="w-100"
+                    value="viewAll"
+                    onClick={(e) => onNavChange(e.target.value)}
+                  >
                     View all<span className="d-none"> of the players </span>{" "}
                     cards
                   </Button>

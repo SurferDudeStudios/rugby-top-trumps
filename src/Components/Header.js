@@ -7,16 +7,15 @@ import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faBinoculars } from "@fortawesome/free-solid-svg-icons";
 import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header({ change }) {
-  function handleNavSelect(e) {
-    e.preventDefault();
-    //onNavChange();
-  }
+export default function Header({ onNavChange }) {
   return (
     <header id="header">
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand
+            href="#home"
+            onClick={(e) => onNavChange("DefaultOpening")}
+          >
             <img
               className="d-md-inline d-block"
               src="/img/world-rugby-logo-white.svg"
@@ -31,13 +30,16 @@ export default function Header({ change }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#play" onClick={handleNavSelect}>
+              <Nav.Link href="#play" onClick={(e) => onNavChange("playGame")}>
                 Play game <FontAwesomeIcon icon={faGamepad} />
               </Nav.Link>
-              <Nav.Link href="#about" onClick={handleNavSelect}>
+              <Nav.Link
+                href="#about"
+                onClick={(e) => onNavChange("lawsOfGame")}
+              >
                 How to play <FontAwesomeIcon icon={faBook} />
               </Nav.Link>
-              <Nav.Link href="#view" onClick={handleNavSelect}>
+              <Nav.Link href="#view" onClick={(e) => onNavChange("viewAll")}>
                 View all players <FontAwesomeIcon icon={faBinoculars} />
               </Nav.Link>
             </Nav>
