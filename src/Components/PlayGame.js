@@ -1,5 +1,3 @@
-//import players from "../JSON/rugby-players.json";
-//import urls from "../JSON/urls.json";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";

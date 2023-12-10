@@ -1,5 +1,3 @@
-//import players from "../JSON/rugby-players.json";
-//import urls from "../JSON/urls.json";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
@@ -18,7 +16,7 @@ export default function ViewCards({ players, suportingData }) {
           <Col>
             <CardContent
               players={players.Players}
-              urls={suportingData.urls}
+              suportingData={suportingData}
             ></CardContent>
           </Col>
         </Row>
@@ -27,10 +25,10 @@ export default function ViewCards({ players, suportingData }) {
   );
 }
 
-function PlayerImage({ img, name }) {
+function PlayerImage({ name, children }) {
   const imageLibrary = "/img/player-images/";
   const defaultImage = "player-default.jpg";
-  let returnImage = imageLibrary.concat(img);
+  let returnImage = imageLibrary.concat(children);
   let defaultReturnImage = imageLibrary.concat(defaultImage);
   return (
     <Card.Img
@@ -64,37 +62,63 @@ function PlayerAge({ dob }) {
   );
 }
 
-function PlayerText({ text }) {
-  let returnText = text.replace(/\s+/g, "-").toLowerCase();
-  let returnLink = generateFactsLink(returnText);
-  function generateFactsLink(returnText) {
-    return "https://www.url.com";
-    //urls.map((url) => ());
-  }
+function PlayerText({ url, className, children }) {
   return (
-    <Card.Text className={returnText}>
-      {text}{" "}
-      <a href={returnLink} target="_blank" rel="noreferrer">
+    <Card.Text className={className}>
+      {children}{" "}
+      <a href={url} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faCircleInfo} />
       </a>
     </Card.Text>
   );
 }
 
-function CardContent({ players }) {
+function CardContent({ players, suportingData }) {
+  function camelCase(str) {
+    return str
+      .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      })
+      .replace(/\s+/g, "");
+  }
+
+  function getClubUrl(club) {
+    return "https://www.url.com";
+  }
+
+  function getCountryUrl(country) {
+    return "https://www.url.com";
+  }
+
+  function getPositionUrl(position) {
+    return "https://www.url.com";
+  }
+
   return (
     <>
       {players.map((player) => (
-        <Card key={player.name} className="card-player">
+        <Card key={player.id} className="card-player">
           <Card.Header>
-            <PlayerImage img={player.img} name={player.name}></PlayerImage>
+            <PlayerImage name={player.name}>{player.img}</PlayerImage>
           </Card.Header>
           <Card.Body>
-            <PlayerText text={player.club}></PlayerText>
-            <PlayerText text={player.country}></PlayerText>
+            <PlayerText
+              url={getClubUrl(player.club)}
+              className={camelCase(player.club)}
+            >
+              {player.club}
+            </PlayerText>
+            <PlayerText
+              url={getCountryUrl(player.country)}
+              className={camelCase(player.country)}
+            >
+              {player.country}
+            </PlayerText>
             <Card.Title>
               {player.name}
-              <span>{player.position}</span>
+              <span>
+                <a href={getPositionUrl(player.position)}>{player.position}</a>
+              </span>
             </Card.Title>
             <ButtonGroup aria-label="Player statistic buttons">
               <PlayerAge dob={player.dob}></PlayerAge>{" "}

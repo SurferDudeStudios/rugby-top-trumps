@@ -32,7 +32,9 @@ export default function App() {
         if (data.Response === "false")
           throw new Error("Players data not found");
 
-        setPlayers(data.Search);
+        //console.log(data);
+
+        setPlayers(data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -57,7 +59,7 @@ export default function App() {
         if (data.Response === "false")
           throw new Error("Players data not found");
 
-        setSupportingData(data.Search);
+        setSupportingData(data);
       } catch (err) {
         setError(err.message);
       } finally {
