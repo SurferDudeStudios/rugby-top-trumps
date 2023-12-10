@@ -1,5 +1,5 @@
-import players from "../JSON/rugby-players.json";
-import urls from "../JSON/urls.json";
+//import players from "../JSON/rugby-players.json";
+//import urls from "../JSON/urls.json";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,7 @@ import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function ViewCards() {
+export default function ViewCards({ players, suportingData }) {
   return (
     <section>
       <Container>
@@ -18,7 +18,7 @@ export default function ViewCards() {
           <Col>
             <CardContent
               players={players.Players}
-              urls={urls.urls}
+              urls={suportingData.urls}
             ></CardContent>
           </Col>
         </Row>

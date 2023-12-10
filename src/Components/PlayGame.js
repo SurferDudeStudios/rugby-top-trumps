@@ -1,5 +1,5 @@
-import players from "../JSON/rugby-players.json";
-import urls from "../JSON/urls.json";
+//import players from "../JSON/rugby-players.json";
+//import urls from "../JSON/urls.json";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,7 @@ import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function PlayGame() {
+export default function PlayGame({ players }) {
   return (
     <section>
       <Container>
