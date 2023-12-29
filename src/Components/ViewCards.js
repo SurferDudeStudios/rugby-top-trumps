@@ -5,19 +5,28 @@ import Container from "react-bootstrap/Container";
 //import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
+import CardFilter from "./CardFilter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function ViewCards({ players, suportingData }) {
+export default function ViewCards({ players, supportingData }) {
   return (
     <section>
       <Container>
+        <h2 className="mt-4">View all players</h2>
         <Row>
           <Col>
-            <CardContent
-              players={players.Players}
-              suportingData={suportingData}
-            ></CardContent>
+            <CardFilter />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="card-container">
+              <CardContent
+                players={players.Players}
+                supportingData={supportingData}
+              />
+            </div>
           </Col>
         </Row>
       </Container>
@@ -73,7 +82,7 @@ function PlayerText({ url, className, children }) {
   );
 }
 
-function CardContent({ players, suportingData }) {
+function CardContent({ players, supportingData }) {
   function camelCase(str) {
     return str
       .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
@@ -83,14 +92,22 @@ function CardContent({ players, suportingData }) {
   }
 
   function getClubUrl(club) {
+    //console.log(supportingData.clubs.find(({ text }) => text === club));
     return "https://www.url.com";
   }
 
   function getCountryUrl(country) {
+    //console.log(supportingData.countries.find(({ text }) => text === country));
     return "https://www.url.com";
   }
 
+  //({ name }) => name === "cherries")
+
   function getPositionUrl(position) {
+    const positionArray = supportingData.positions.find(
+      ({ text }) => text === position
+    );
+    console.log(positionArray);
     return "https://www.url.com";
   }
 
@@ -122,37 +139,25 @@ function CardContent({ players, suportingData }) {
             </Card.Title>
             <ButtonGroup aria-label="Player statistic buttons">
               <PlayerAge dob={player.dob}></PlayerAge>{" "}
-              <Button variant="primary">
-                Caps: <span className="card-button-value">{player.caps}</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Height:{" "}
-                <span className="card-button-value">{player.height}cm</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Weight:{" "}
-                <span className="card-button-value">{player.weight}kg</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Points:{" "}
-                <span className="card-button-value">{player.points}</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Red cards:{" "}
-                <span className="card-button-value">{player.reds}</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Yellow cards:{" "}
-                <span className="card-button-value">{player.yellows}</span>
-              </Button>{" "}
-              <Button variant="primary">
-                Percent:{" "}
-                <span className="card-button-value">{player.percent}%</span>
-              </Button>{" "}
+              <CardButton btnContent={player.caps}>Caps</CardButton>{" "}
+              <CardButton btnContent={player.height}>Height</CardButton>{" "}
+              <CardButton btnContent={player.weight}>Weight</CardButton>{" "}
+              <CardButton btnContent={player.points}>Points</CardButton>{" "}
+              <CardButton btnContent={player.reds}>Red Cards</CardButton>{" "}
+              <CardButton btnContent={player.yellows}>Yellow Cards</CardButton>{" "}
+              <CardButton btnContent={player.percent}>Percent</CardButton>{" "}
             </ButtonGroup>
           </Card.Body>
         </Card>
       ))}
     </>
+  );
+}
+
+function CardButton({ btnContent, children }) {
+  return (
+    <Button variant="primary">
+      {children}: <span className="card-button-value">{btnContent}</span>
+    </Button>
   );
 }

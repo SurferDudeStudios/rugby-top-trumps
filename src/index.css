@@ -27,6 +27,23 @@ header a,
 header button span {
   color: #ffffff !important;
 }
+
+.filter-form {
+  background-color: #ffffff !important;
+}
+.filter-form label {
+  margin-left: 0.5rem;
+}
+.filter-cards-button {
+  text-align: right;
+  background-color: #333333;
+  color: #333366;
+}
+
+.opening-card .card-header,
+.opening-card .card-footer {
+  padding: 0;
+}
 .card-player {
   width: 235px;
   max-width: 235px;

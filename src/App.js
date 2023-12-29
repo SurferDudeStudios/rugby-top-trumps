@@ -8,7 +8,11 @@ import ViewCards from "./Components/ViewCards";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const playerData = "http://localhost:3000/JSON/rugby-players.json";
-const supportData = "http://localhost:3000/JSON/urls.json";
+const supportData = "http://localhost:3000/JSON/rugby-urls.json";
+
+//const playerData =
+//  "https://www.surferdudestudios.co.uk/json/rugby-players.json";
+//const supportData = "https://www.surferdudestudios.co.uk/json/rugby-urls.json";
 
 export default function App() {
   const [gameState, setGameState] = useState("DefaultOpening");
